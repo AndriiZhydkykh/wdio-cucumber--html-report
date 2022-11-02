@@ -3,7 +3,7 @@ const navigationMenuButtons = 'header span span';
 const navigationMenuDropDowns = '[class*="ctVOEX"]';
 const productsButton ='//header//span[text()="Products"]'
 const productButtonsDropdownLinks='(//*[@href="/products/sip-trunks"])[1]//..//..//..//a'
-const solutionsButton ='//header//span[text()="Solutions"]'
+/* const solutionsButton ='//header//span[text()="Solutions"]'
 const customerEngagementPlatformsLinkInSolutionDropdown ='header [href*="agement-platforms"]'
 const seeAllSolutionsInSolutionsDropdown='[href="/solutions"]'
 const seeAllUseCasesInSolutionsDropdown='[href="/use-cases"]'
@@ -12,11 +12,7 @@ const resourcesButton ='//header//span[text()="Resources"]'
 const developerDocsLinkInTheResourcesButton='header [href="https://developers.telnyx.com/docs/v2"]'
 const signUpLink='(//header//a[@href="/sign-up"])[2]'
 const signInLink='(//header//*[@href="https://portal.telnyx.com/"])[1]'
-const supportCenterLink='(//header//*[@href="https://support.telnyx.com/en/"])[1]'
-
-
-
-
+const supportCenterLink='(//header//*[@href="https://support.telnyx.com/en/"])[1]' */
 
 class HeaderPage {
   async hoverNavigationMenuButtons(index) {
@@ -31,7 +27,7 @@ class HeaderPage {
   async getProductButtonsDropdownLinks(index) {
     return Page.getElementByIndex(productButtonsDropdownLinks,index);
 }
-async moveToSolutionsButton() {
+/* async moveToSolutionsButton() {
   return await Page.moveTo(solutionsButton);
 }
 async clickCustomerEngagementPlatformsLinkInSolutionDropdown() {
@@ -60,7 +56,7 @@ async clickSignInLink() {
 }
 async clickSupportCenterLink() {
   return await Page.click(supportCenterLink);
-}
+} */
 
 }
 

@@ -1,5 +1,5 @@
 const Page = require('../test/pages/page');
-const HeaderPage = require('../test/pages/header.page');
+const HeaderPage = require('../test/pages/header.page')
 const cookiesModalWindow='[aria-label="close and deny"]~div>div'
 const randomEmail=Math.random().toString(36).substring(2,10)+"@gmail.com"
 const randomName=Math.random().toString(36).substring(2,10)
