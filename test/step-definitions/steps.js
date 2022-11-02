@@ -1,12 +1,14 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
-const MainPage = require('../pages/main.page');
 const HelperScripts = require('../../helper/helper.scripts');
+const MainPage = require('../pages/main.page');
 const HeaderPage = require('../pages/header.page');
+const SolutionPage = require('../pages/solutions.page');
 
   Given(/^A user open main page$/, async() => {
     await MainPage.open()
   });
-    //ID-1 Open Voice Api from main page
+
+  //ID-1 Open Voice Api from main page
   When(/^A user close cookies modal window$/, async() =>  {
     await HelperScripts.closeModalCookiesWindow()
   });
@@ -30,8 +32,28 @@ const HeaderPage = require('../pages/header.page');
   });
   
   //ID-3 Check that all item from Products dropdown menu on header to be able click
+
   Then(/^A user move to Products menu link on the header and sees the all links are clickable$/, async() => {
     await HeaderPage.moveToProductsButton()
     await HelperScripts.checkLinksInProductsButtonIsClickable()
   }); 
 
+//ID-4 Open the Talk to an expert from Customer Engagement Platforms page
+
+  Then(/^A user move to solution link in header menu$/, async() =>  {
+    await HeaderPage.moveToSolutionsButton();
+  });
+  Then(/^A user click the customer-engagement-platforms link in dropdown menu$/, async() =>  {
+    await HeaderPage.clickCustomerEngagementPlatformsLinkInSolutionDropdown()
+  });
+  Then(/^A user click the Schedule a call with our experts button$/, async() =>  {
+    await SolutionPage.clickScheduleCallButton();
+  });
+
+  Then(/^A user sees the contact us page on the url (.+)$/, async(contactUrl) => {
+    await expect(browser).toHaveUrl(contactUrl)
+  });
+
+  Then(/^A user sees the Talk to an expert title (.+)$/, async(title) => {
+    await expect(await SolutionPage.getContactUsTitle()).toHaveText(title)
+  }); 
