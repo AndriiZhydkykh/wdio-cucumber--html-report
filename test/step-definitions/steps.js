@@ -3,6 +3,7 @@ const HelperScripts = require('../../helper/helper.scripts');
 const MainPage = require('../pages/main.page');
 const HeaderPage = require('../pages/header.page');
 const SolutionPage = require('../pages/solutions.page');
+const NetworkPage = require('../pages/network.page');
 
   Given(/^A user open main page$/, async() => {
     await MainPage.open()
@@ -87,4 +88,19 @@ const SolutionPage = require('../pages/solutions.page');
 
   Then(/^A user sees the Contact Center Solutions title (.+)$/, async(title) => {
     await expect(await SolutionPage.getContactCenterPageTitle()).toHaveText(title)
+  }); 
+//ID-7 Open the virtual cross connects page from Network link in Header menu
+  Then(/^A user click the Network link in Header menu$/, async() =>  {
+    await HeaderPage.clickNetworkButton();
+  });
+  Then(/^A user click the Explore VXCs button on the Network page$/, async() =>  {
+    await NetworkPage.clickExploreVXCs();;
+  });
+  
+  Then(/^A user sees the virtual cross connects page on the url (.+)$/, async(virtualCrossUrl) => {
+      await expect(browser).toHaveUrl(virtualCrossUrl)
+  });
+  
+  Then(/^A user sees virtual-cross-connects title (.+)$/, async(title) => {
+      await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
   }); 

@@ -7,8 +7,8 @@ const productButtonsDropdownLinks='(//*[@href="/products/sip-trunks"])[1]//..//.
 const customerEngagementPlatformsLinkInSolutionDropdown ='header [href*="agement-platforms"]'
 const seeAllSolutionsInSolutionsDropdown='[href="/solutions"]'
 const seeAllUseCasesInSolutionsDropdown='[href="/use-cases"]'
-/*const networkButton='header li [href="/solutions/global-ip-network"]'
-const resourcesButton ='//header//span[text()="Resources"]'
+const networkButton='header li [href="/solutions/global-ip-network"]'
+/*const resourcesButton ='//header//span[text()="Resources"]'
 const developerDocsLinkInTheResourcesButton='header [href="https://developers.telnyx.com/docs/v2"]'
 const signUpLink='(//header//a[@href="/sign-up"])[2]'
 const signInLink='(//header//*[@href="https://portal.telnyx.com/"])[1]'
@@ -39,9 +39,10 @@ async clickSeeAllSolutionsInSolutionsDropdown() {
 async clickSeeAllUseCasesInSolutionsDropdownInSolutionsDropdown() {
   return await Page.click(seeAllUseCasesInSolutionsDropdown);
 }
-/* async clickNetworkButton() {
+ async clickNetworkButton() {
   return await Page.click(networkButton);
 }
+/*
 async moveToResourcesButton() {
   return await Page.moveTo(resourcesButton);
 }

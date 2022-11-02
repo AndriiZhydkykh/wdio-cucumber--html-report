@@ -38,7 +38,7 @@ Feature: The solution page testing
          Then A user sees the Contact Center Solutions title <title>
 
          Examples:
-        | contactCenterUrl                             | title                   |
+        | contactCenterUrl                                | title                                          |
         | https://telnyx.com/use-cases/contact-center  | Contact Center Solutions|
 
 
