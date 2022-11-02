@@ -94,13 +94,45 @@ const NetworkPage = require('../pages/network.page');
     await HeaderPage.clickNetworkButton();
   });
   Then(/^A user click the Explore VXCs button on the Network page$/, async() =>  {
-    await NetworkPage.clickExploreVXCs();;
+    await NetworkPage.clickExploreVXCs();
   });
   
   Then(/^A user sees the virtual cross connects page on the url (.+)$/, async(virtualCrossUrl) => {
-      await expect(browser).toHaveUrl(virtualCrossUrl)
+      await expect(browser).toHaveUrl(virtualCrossUrl);
   });
   
   Then(/^A user sees virtual-cross-connects title (.+)$/, async(title) => {
       await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
   }); 
+
+  //ID-8 See price for Elastic SIP Trunking from Network Page
+
+  Then(/^A user click the See our Pricing button link on the Network page$/, async() =>  {
+    await NetworkPage.clickSeePriceButton();
+  });
+  Then(/^A user click the see Pricing link for Elastic SIP Trunking$/, async() =>  {
+    await NetworkPage.clickElasticSIPTrunkingPriceLink();
+  });
+  
+  Then(/^A user sees the pricing page on the elastic sip url (.+)$/, async(elasticSipPriceUrl) => {
+      await expect(browser).toHaveUrl(elasticSipPriceUrl)
+  });
+  
+  Then(/^A user sees the SIP Trunk Pricing title (.+)$/, async(title) => {
+      await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
+  }); 
+
+  //ID-9 Open SMS API from Network Page
+
+  Then(/^A user click the Explore Messaging link on the Network page$/, async() =>  {
+    await NetworkPage.clickExploreMessaging();
+  });
+  
+  Then(/^A user sees the SMS API page on the url (.+)$/, async(smsApiUrl) => {
+      await expect(browser).toHaveUrl(smsApiUrl)
+  });
+  
+  Then(/^A user sees SMS API page title (.+)$/, async(title) => {
+      await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
+  }); 
+
