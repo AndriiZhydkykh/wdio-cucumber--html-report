@@ -57,3 +57,19 @@ const SolutionPage = require('../pages/solutions.page');
   Then(/^A user sees the Talk to an expert title (.+)$/, async(title) => {
     await expect(await SolutionPage.getContactUsTitle()).toHaveText(title)
   }); 
+
+  //ID-5 Open Explore Healthcare Solutions from Solutions page
+  Then(/^A user click the See all Solutions link in the dropdown menu$/, async() =>  {
+    await HeaderPage.clickSeeAllSolutionsInSolutionsDropdown()
+  });
+  Then(/^A user click the Explore Healthcare Solutions link on the solution page$/, async() =>  {
+    await SolutionPage.clickHealthCareApisLink();
+  });
+
+  Then(/^A user sees the healthcare apis page on the url (.+)$/, async(healthCareUrl) => {
+    await expect(browser).toHaveUrl(healthCareUrl)
+  });
+
+  Then(/^A user sees the Elevate patient engagement with healthcare APIs title (.+)$/, async(title) => {
+    await expect(await SolutionPage.getHealthCarePageTitle()).toHaveText(title)
+  }); 
