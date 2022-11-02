@@ -73,3 +73,18 @@ const SolutionPage = require('../pages/solutions.page');
   Then(/^A user sees the Elevate patient engagement with healthcare APIs title (.+)$/, async(title) => {
     await expect(await SolutionPage.getHealthCarePageTitle()).toHaveText(title)
   }); 
+  //ID-6 Open the Contact Center Solutions from Solutions page
+  Then(/^A user click the See all Use Cases link in dropdown menu$/, async() =>  {
+    await HeaderPage.clickSeeAllUseCasesInSolutionsDropdownInSolutionsDropdown()
+  });
+  Then(/^A user click the Explore Contact Center link$/, async() =>  {
+    await SolutionPage.clickContactCenterLink();
+  });
+
+  Then(/^A user sees the Contact Center page on the url (.+)$/, async(contactCenterUrl) => {
+    await expect(browser).toHaveUrl(contactCenterUrl)
+  });
+
+  Then(/^A user sees the Contact Center Solutions title (.+)$/, async(title) => {
+    await expect(await SolutionPage.getContactCenterPageTitle()).toHaveText(title)
+  }); 

@@ -29,4 +29,16 @@ Feature: The solution page testing
         | healthCareUrl                                | title                                          |
         | https://telnyx.com/solutions/healthcare-apis | Elevate patient engagement with healthcare APIs|
 
+    Scenario: ID-6 Open the Contact Center Solutions from Solutions page
+         When A user close cookies modal window
+         Then A user move to solution link in header menu
+         Then A user click the See all Use Cases link in dropdown menu
+         Then A user click the Explore Contact Center link
+         Then A user sees the Contact Center page on the url <contactCenterUrl> 
+         Then A user sees the Contact Center Solutions title <title>
+
+         Examples:
+        | contactCenterUrl                             | title                   |
+        | https://telnyx.com/use-cases/contact-center  | Contact Center Solutions|
+
 
