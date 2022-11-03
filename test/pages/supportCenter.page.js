@@ -5,7 +5,7 @@ const searchField='[class*="search__input"]'
 
 
 class SupportCenterPage {
-  
+   
   async clickHowToSignUpArticleFromSearch() {
     return await Page.click(howToSignUpArticleFromSearch);
   }
