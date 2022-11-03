@@ -344,7 +344,7 @@ exports.config = {
           // This part needs to be the same path where you store the JSON files
           // default = '.tmp/json/'
           jsonDir: '.tmp/new/',
-          reportPath: '.tmp/report/',
+          reportPath: 'report/',
           // for more options see https://github.com/wswebcreation/multiple-cucumber-html-reporter#options
         });
       },
