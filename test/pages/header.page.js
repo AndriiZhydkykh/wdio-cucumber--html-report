@@ -8,11 +8,7 @@ const customerEngagementPlatformsLinkInSolutionDropdown ='header [href*="agement
 const seeAllSolutionsInSolutionsDropdown='[href="/solutions"]'
 const seeAllUseCasesInSolutionsDropdown='[href="/use-cases"]'
 const networkButton='header li [href="/solutions/global-ip-network"]'
-/*const resourcesButton ='//header//span[text()="Resources"]'
-const developerDocsLinkInTheResourcesButton='header [href="https://developers.telnyx.com/docs/v2"]'
-const signUpLink='(//header//a[@href="/sign-up"])[2]'
-const signInLink='(//header//*[@href="https://portal.telnyx.com/"])[1]'
-const supportCenterLink='(//header//*[@href="https://support.telnyx.com/en/"])[1]' */
+const supportCenterLink='(//header//*[@href="https://support.telnyx.com/en/"])[1]' 
 
 class HeaderPage {
   async hoverNavigationMenuButtons(index) {
@@ -42,22 +38,9 @@ async clickSeeAllUseCasesInSolutionsDropdownInSolutionsDropdown() {
  async clickNetworkButton() {
   return await Page.click(networkButton);
 }
-/*
-async moveToResourcesButton() {
-  return await Page.moveTo(resourcesButton);
-}
-async clickDeveloperDocsLinkInTheResourcesButton() {
-  return await Page.click(developerDocsLinkInTheResourcesButton);
-}
-async clickSignUpLink() {
-  return await Page.click(signUpLink);
-}
-async clickSignInLink() {
-  return await Page.click(signInLink);
-}
-async clickSupportCenterLink() {
+ async clickSupportCenterLink() {
   return await Page.click(supportCenterLink);
-} */ 
+}  
 
 }
 

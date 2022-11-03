@@ -11,7 +11,10 @@
         "@wdio/cucumber-framework": "^7.25.4",
         "@wdio/local-runner": "^7.25.4",
         "@wdio/selenium-standalone-service": "^7.25.4",
-        "@wdio/spec-reporter": "^7.25.4"
+        "@wdio/spec-reporter": "^7.25.4",
+        "fs-extra": "^10.1.0",
+        "multiple-cucumber-html-reporter": "^3.0.1",
+        "wdio-cucumberjs-json-reporter": "^4.4.3"
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.js"

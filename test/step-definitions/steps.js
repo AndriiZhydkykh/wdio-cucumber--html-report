@@ -1,9 +1,11 @@
-const { Given, When, Then } = require('@wdio/cucumber-framework');
+const { Given, When, Then, After } = require('@wdio/cucumber-framework');
 const HelperScripts = require('../../helper/helper.scripts');
 const MainPage = require('../pages/main.page');
 const HeaderPage = require('../pages/header.page');
 const SolutionPage = require('../pages/solutions.page');
 const NetworkPage = require('../pages/network.page');
+const SupportCenterPage=require('../pages/supportCenter.page');
+
 
   Given(/^A user open main page$/, async() => {
     await MainPage.open()
@@ -136,3 +138,18 @@ const NetworkPage = require('../pages/network.page');
       await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
   }); 
 
+  //10 - Find the article How to Sign Up for a Telnyx account on the support center using search
+  Then(/^A user click the support center link of the top  right on the page$/, async() =>  {
+    await HeaderPage.clickSupportCenterLink();
+  });
+  
+  Then(/^A user type (.+) in the search filed$/, async(TextForSearch) => {
+    await SupportCenterPage.typeSearchField(TextForSearch);
+  });
+  
+  Then(/^A user click How to Sign Up for a Telnyx account article$/, async() => {
+    await SupportCenterPage.clickHowToSignUpArticleFromSearch();
+  });
+  Then(/^A user sees the article title (.+)$/, async(title) => {
+    await expect(await SupportCenterPage.getHowToSignUpArticleTitle()).toHaveText(title)
+});
