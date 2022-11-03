@@ -23,8 +23,8 @@ Feature: The network page testing
          Then A user sees the SIP Trunk Pricing title <title>
 
          Examples:
-        | elasticSipPriceUrl         | title                    |
-        | https://telnyx.com/pricing | Only pay for what you use|
+        | elasticSipPriceUrl                     | title                    |
+        | https://telnyx.com/pricing/elastic-sip | SIP Trunk Pricing        |
 
     Scenario: ID-9 Open SMS API from Network Page
          When A user close cookies modal window

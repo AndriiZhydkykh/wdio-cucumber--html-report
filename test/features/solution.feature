@@ -39,6 +39,6 @@ Feature: The solution page testing
 
          Examples:
         | contactCenterUrl                                | title                                          |
-        | https://telnyx.com/use-cases/contact-center  | Contact Center Solutions|
+        | https://telnyx.com/use-cases/contact-center     | Contact Center Solutions|
 
 
