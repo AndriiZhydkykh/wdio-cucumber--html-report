@@ -10,8 +10,8 @@ const SupportCenterPage=require('../pages/supportCenter.page');
   Given(/^A user open main page$/, async() => {
     await MainPage.open()
   });
+  
 
-  //ID-1 Open Voice Api from main page
   When(/^A user close cookies modal window$/, async() =>  {
     await HelperScripts.closeModalCookiesWindow()
   });
@@ -28,20 +28,20 @@ const SupportCenterPage=require('../pages/supportCenter.page');
     await expect(await MainPage.getVoicePageTitle()).toHaveText(title)
   });  
 
-  //ID-2 Check that Product, Solution, Resources,Company,Pricing links in the header menu open drowpdown menu when hover those
   
+
   Then(/^A user move to Products menu link on the header and sees the dropdown menu in the all links$/, async() => {
     await HelperScripts.checkButtonsHaveDropdown();
   });
   
-  //ID-3 Check that all item from Products dropdown menu on header to be able click
+
 
   Then(/^A user move to Products menu link on the header and sees the all links are clickable$/, async() => {
     await HeaderPage.moveToProductsButton()
     await HelperScripts.checkLinksInProductsButtonIsClickable()
   }); 
 
-//ID-4 Open the Talk to an expert from Customer Engagement Platforms page
+
 
   Then(/^A user move to solution link in header menu$/, async() =>  {
     await HeaderPage.moveToSolutionsButton();
@@ -61,7 +61,8 @@ const SupportCenterPage=require('../pages/supportCenter.page');
     await expect(await SolutionPage.getContactUsTitle()).toHaveText(title)
   }); 
 
-  //ID-5 Open Explore Healthcare Solutions from Solutions page
+
+
   Then(/^A user click the See all Solutions link in the dropdown menu$/, async() =>  {
     await HeaderPage.clickSeeAllSolutionsInSolutionsDropdown()
   });
@@ -76,7 +77,9 @@ const SupportCenterPage=require('../pages/supportCenter.page');
   Then(/^A user sees the Elevate patient engagement with healthcare APIs title (.+)$/, async(title) => {
     await expect(await SolutionPage.getHealthCarePageTitle()).toHaveText(title)
   }); 
-  //ID-6 Open the Contact Center Solutions from Solutions page
+
+
+
   Then(/^A user click the See all Use Cases link in dropdown menu$/, async() =>  {
     await HeaderPage.clickSeeAllUseCasesInSolutionsDropdownInSolutionsDropdown()
   });
@@ -91,7 +94,9 @@ const SupportCenterPage=require('../pages/supportCenter.page');
   Then(/^A user sees the Contact Center Solutions title (.+)$/, async(title) => {
     await expect(await SolutionPage.getContactCenterPageTitle()).toHaveText(title)
   }); 
-//ID-7 Open the virtual cross connects page from Network link in Header menu
+
+
+
   Then(/^A user click the Network link in Header menu$/, async() =>  {
     await HeaderPage.clickNetworkButton();
   });
@@ -107,7 +112,7 @@ const SupportCenterPage=require('../pages/supportCenter.page');
       await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
   }); 
 
-  //ID-8 See price for Elastic SIP Trunking from Network Page
+
 
   Then(/^A user click the See our Pricing button link on the Network page$/, async() =>  {
     await NetworkPage.clickSeePriceButton();
@@ -124,7 +129,7 @@ const SupportCenterPage=require('../pages/supportCenter.page');
       await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
   }); 
 
-  //ID-9 Open SMS API from Network Page
+
 
   Then(/^A user click the Explore Messaging link on the Network page$/, async() =>  {
     await NetworkPage.clickExploreMessaging();
@@ -138,7 +143,7 @@ const SupportCenterPage=require('../pages/supportCenter.page');
       await expect(await NetworkPage.getExploreVXCsPageTitle()).toHaveText(title)
   }); 
 
-  //10 - Find the article How to Sign Up for a Telnyx account on the support center using search
+
   Then(/^A user click the support center link of the top  right on the page$/, async() =>  {
     await HeaderPage.clickSupportCenterLink();
   });
