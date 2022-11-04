@@ -43,6 +43,6 @@ npm run test:chrome:UI:OneFile header.feature
 ---
 #### Report view
 
-<img width="418" alt="Allure report" src="https://live.staticflickr.com/65535/52476600013_b6da0b0283.jpg">
+<img width="" alt="Allure report" src="https://live.staticflickr.com/65535/52476600013_b6da0b0283_b.jpg" style="border:3px black solid">
 
 ---
