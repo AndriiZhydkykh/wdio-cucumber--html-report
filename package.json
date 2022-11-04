@@ -10,13 +10,18 @@
         "@wdio/cli": "^7.25.4",
         "@wdio/cucumber-framework": "^7.25.4",
         "@wdio/local-runner": "^7.25.4",
-        "@wdio/selenium-standalone-service": "^7.25.4",
         "@wdio/spec-reporter": "^7.25.4",
+        "chromedriver": "^107.0.3",
+        "wdio-chromedriver-service": "^8.0.0",
+        "cross-env": "^7.0.3",
         "fs-extra": "^10.1.0",
         "multiple-cucumber-html-reporter": "^3.0.1",
         "wdio-cucumberjs-json-reporter": "^4.4.3"
     },
     "scripts": {
-        "wdio": "wdio run wdio.conf.js"
+        "test:chrome:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js",
+        "test:chrome": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.js",
+        "test:chrome:headless:OneFile": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js --spec",
+        "test:chrome:UI:OneFile": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.js --spec"
     }
 }

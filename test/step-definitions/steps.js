@@ -7,7 +7,7 @@ const NetworkPage = require('../pages/network.page');
 const SupportCenterPage=require('../pages/supportCenter.page');
 
 
-  Given(/^A user open main page$/, async() => {
+  Given(/^A user open main page$/,{ wrapperOptions: { retry: 2 } }, async() => {
     await MainPage.open()
   });
   
