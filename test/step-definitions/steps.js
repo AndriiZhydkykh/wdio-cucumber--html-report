@@ -1,4 +1,4 @@
-const { Given, When, Then, After } = require('@wdio/cucumber-framework');
+const { Given, When, Then} = require('@wdio/cucumber-framework');
 const HelperScripts = require('../../helper/helper.scripts');
 const MainPage = require('../pages/main.page');
 const HeaderPage = require('../pages/header.page');

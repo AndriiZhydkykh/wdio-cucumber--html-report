@@ -3,7 +3,7 @@ const navigationMenuButtons = 'header span span';
 const navigationMenuDropDowns = '[class*="ctVOEX"]';
 const productsButton ='//header//span[text()="Products"]'
 const productButtonsDropdownLinks='(//*[@href="/products/sip-trunks"])[1]//..//..//..//a'
- const solutionsButton ='//header//span[text()="Solutions"]'
+const solutionsButton ='//header//span[text()="Solutions"]'
 const customerEngagementPlatformsLinkInSolutionDropdown ='header [href*="agement-platforms"]'
 const seeAllSolutionsInSolutionsDropdown='[href="/solutions"]'
 const seeAllUseCasesInSolutionsDropdown='[href="/use-cases"]'

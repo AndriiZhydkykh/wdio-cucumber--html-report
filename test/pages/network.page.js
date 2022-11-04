@@ -5,7 +5,7 @@ const seePriceButton='main [href="/pricing"]'
 const elasticSIPTrunkingPriceLink='main [href="/pricing/elastic-sip"]'
 const exploreMessaging='main [href="/products/sms-api"]'
 
-class Network {
+class NetworkPage{
   async clickExploreVXCs() {
     return await Page.click(exploreVXCs);
   }
@@ -23,4 +23,4 @@ class Network {
   }
 }
 
-module.exports = new Network();
+module.exports = new NetworkPage();

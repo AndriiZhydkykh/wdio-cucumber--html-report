@@ -29,17 +29,7 @@ exports.config = {
     exclude: [
         // 'path/to/excluded/files'
     ],
-    capabilities: [
-      {
-          'cjson:metadata': {
-              device: 'PC',
-              platform: {
-                  name: 'Windows 11',
-                  version: '10.0.22000'
-              }
-          },
-      },
-  ],
+  
     //
     // ============
     // Capabilities

@@ -39,10 +39,10 @@ npm run test:chrome:UI:OneFile + name features file that you want to be run
 npm run test:chrome:UI:OneFile header.feature
 ```
 #### To open the report: 
-Open the folder report in the project and open index.html file
+##### Open the folder report in the project and open index.html file
 ---
 #### Report view
 
-<img width="418" alt="Allure report" src="https://live.staticflickr.com/65535/52457355632_d1696ae819.jpg">
+<img width="418" alt="Allure report" src="https://live.staticflickr.com/65535/52476600013_b6da0b0283.jpg">
 
 ---
