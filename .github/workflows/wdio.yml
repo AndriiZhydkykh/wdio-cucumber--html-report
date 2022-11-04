@@ -3,20 +3,18 @@ on:
     push:
         branches: [master]
 jobs:
-    Run_test:
-        runs-on: windows-latest
+    test:
+        timeout-minutes: 60
+        runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version: [14.17.0]
         steps:
             - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v2
+            - uses: actions/setup-node@v2
               with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "npm"
-            - name: update node manager
-              run: npm i npm@latest
+                node-version: '14.x'
+                
             - name: install all dependencies
               run: npm i
             - name: run tests and create report
